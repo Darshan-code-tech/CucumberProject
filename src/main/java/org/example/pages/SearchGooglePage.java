@@ -5,7 +5,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utils.ElementUtils;
-import utils.CommonUtils;
 public class SearchGooglePage {
 
     // Locators
@@ -25,7 +24,6 @@ public class SearchGooglePage {
     private WebDriver driver;
     private ElementUtils elementUtils;
 
-    //Constructor
     public SearchGooglePage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver,this);
@@ -39,10 +37,6 @@ public class SearchGooglePage {
     public void clickGoogleSearchButton(){
         googleSearchButtonLocator.click();
     }
-
-//    public String getMessageText() {
-//        return elementUtils.getTextFromElement(searchResult,CommonUtils.EXPLICIT_WAIT_BASIC_TIME);
-//    }
 
     public Boolean isAvailable() {
         Boolean Display = searchPage.isDisplayed();

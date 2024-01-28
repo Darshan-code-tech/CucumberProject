@@ -1,14 +1,10 @@
 package org.example.stepdefs;
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
 import org.example.pages.SearchGooglePage;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import java.util.concurrent.TimeUnit;
 
 public class SearchGoogleStepdef {
     WebDriver driver;
@@ -23,7 +19,6 @@ public class SearchGoogleStepdef {
     @Given("I have entered a {string} in the search box")
     public void i_have_entered_a_in_the_search_box(String string) {
         searchGooglePage.enterText(string);
-
     }
 
     @When("^I click on the search button$")
