@@ -1,7 +1,12 @@
-## Steps to launch project:
+## Pre-requisites
 
-Clone the repo
+* Java 17 or higher
 
-cd CucumberProject
 
-Run tests with Maven : Use command - "mvn clean test"
+### Steps to launch project:
+
+1. Clone the repo
+   
+2. cd CucumberProject
+
+3. Run tests with Maven : Use command - "mvn clean test"
