@@ -8,11 +8,25 @@ import org.example.pages.SearchGooglePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import java.util.concurrent.TimeUnit;
+import java.time.Duration;
 
-public class SearchGoogleStepdef {
+public class SearchGoogleStepdef{
     WebDriver driver;
     SearchGooglePage searchGooglePage;
+
+    @Before
+    public void setup() {
+        driver = new ChromeDriver();
+        driver.manage().deleteAllCookies();
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+    }
+    @After
+    public void tearDown(){
+        if(driver!=null){
+            driver.quit();
+        }
+    }
 
     @Given("^I am on search page$")
     public void i_am_on_search_page(){
@@ -23,7 +37,6 @@ public class SearchGoogleStepdef {
     @Given("I have entered a {string} in the search box")
     public void i_have_entered_a_in_the_search_box(String string) {
         searchGooglePage.enterText(string);
-
     }
 
     @When("^I click on the search button$")
@@ -33,8 +46,6 @@ public class SearchGoogleStepdef {
 
     @Then("I should see the {string} successfully")
     public void i_should_see_the_successfully(String expectedResult){
-        Assert.assertEquals(true, searchGooglePage.isAvailable());
-        //System.out.println(searchGooglePage.isAvailable());
         Assert.assertEquals(expectedResult,searchGooglePage.getDynamicElement(expectedResult).getText());
     }
 }

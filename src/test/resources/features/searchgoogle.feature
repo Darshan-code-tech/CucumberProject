@@ -12,10 +12,10 @@ Feature: Search Functionality
     When I click on the search button
     Then I should see the "<ExpectedResult>" successfully
     Examples:
-      | Search             |  | ExpectedResult                      |
-      | selenium wikepedia |  | Selenium                            |
-      | 0123               |  | 123movies: Watch Free Movies Online |
-      | @SJSU!             |  | San José State University           |
+      | Search |  | ExpectedResult                      |
+      | apple  |  | Apple                               |
+      | 0123   |  | 123movies: Watch Free Movies Online |
+      | @SJSU! |  | San José State University           |
 
 
 
