@@ -2,3 +2,6 @@
 /target/
 .idea
 source
+src/test/.DS_Store
+.DS_Store
+target_reports/

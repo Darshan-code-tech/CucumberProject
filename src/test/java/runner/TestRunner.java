@@ -5,7 +5,7 @@ import io.cucumber.testng.CucumberOptions;
 import org.testng.annotations.DataProvider;
 
 @CucumberOptions(features = "src/test/resources/features",
-                 glue = {"org.example.stepdefs"},
+                 glue = {"org.example.stepdefs", "hooks"},
                  plugin = {"pretty", "html: target_reports/cucumber-reports", "json: target_reports/cucumber.json"},
                  monochrome = true)
 
@@ -16,5 +16,6 @@ public class TestRunner extends AbstractTestNGCucumberTests {
         return super.scenarios();
     }
 }
+
 
 
