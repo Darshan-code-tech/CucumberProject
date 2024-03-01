@@ -12,6 +12,6 @@ Feature: Bing Search Functionality
     When I click on the bing search button
     Then I should see the "<ExpectedResult>" successfully on bing
     Examples:
-      | Search |  | ExpectedResult                      |
-      | Amazon |  | Amazon.com. Spend less. Smile more. |
-      | 123    |  | 123 GO! - YouTube                   |
+      | Search    |  | ExpectedResult                              |
+      | Microsoft |  | Microsoft – Cloud, Computers, Apps & Gaming |
+      | 123       |  | 123 GO! - YouTube                           |
